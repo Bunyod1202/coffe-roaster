@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Template Project</title>
-  <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
-  <!-- <link rel="stylesheet" href="./css/main.css"> -->
-  <link rel="stylesheet" href="./css/main.min.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
 </head>
 <body>
 
@@ -16,7 +16,27 @@
   <!-- SITE HEADER START -->
 
   <header class="site-header">
-
+    <div class="container">
+      <div class="headr-inner">
+        <a class="logo" href="./index.html">
+          <img src="./images/logo.svg" alt="logo">
+        </a>
+        <nav class="nav nav--active ">
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <a href="./index.html" class="nav__list-link">HOME</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="#" class="nav__list-link">ABOUT US</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="#" class="nav__list-link">Create your plan</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu-btn" type="button" ></button>
+      </div>
+    </div>
   </header>
 
   <!-- SITE HEADER END -->
@@ -26,7 +46,16 @@
   <main class="site-main">
 
     <section class="hero">
-      
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero_contant hero-contant">
+            <h1 class="hero-contant-title">Great coffee
+              made simple.</h1>
+            <p class="hero-contant-text">Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.</p>
+            <a class="btn-grin" href="#">Create your plan</a>
+          </div> 
+        </div>
+      </div>
     </section>
 
   </main>
@@ -38,6 +67,6 @@
 
   </footer>
   <!-- SITE FOOTER END -->
-
+<script src="./js/main.js"></script>
 </body>
 </html>

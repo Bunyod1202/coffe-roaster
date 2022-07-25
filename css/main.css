@@ -1,8 +1,45 @@
 /* VARIABLES */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/barlow-v12-latin-regular.woff2') format('woff2'),
+    url('../fonts/barlow-v12-latin-regular.woff') format('woff');
+}
+
+/* barlow-500 - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/barlow-v12-latin-500.woff2') format('woff2'),
+    url('../fonts/barlow-v12-latin-500.woff') format('woff');
+}
+
+/* barlow-700 - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/barlow-v12-latin-700.woff2') format('woff2'),
+    url('../fonts/barlow-v12-latin-700.woff') format('woff');
+}
+
+/* fraunces-900 - latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/fraunces-v23-latin-900.woff2') format('woff2'),
+    url('../fonts/fraunces-v23-latin-900.woff') format('woff');
+}
 
 :root{
-  /* --main-text-color : #fff; */
-  /* --main-bg-color : #fff; */
+  --main-nav-color-grey : #83888F;
+  --main-text-color-white : #FEFCF7;
+  --main-text-color-black : #333D4B;
+  --main-btn-color-grin : #0E8784;
+  --main-bg-color : #fff;
   /* --main-font-size : 16px; */
   /* --main-font-weight : 400; */
   /* --main-line-height : 1.5; */
@@ -20,14 +57,17 @@ img{
   display: block;
   height: auto;
 }
-
+a {
+  display: inline-block;
+  text-decoration: none;
+}
 body{
   display: flex;
   flex-direction: column;
   height: 100%;
   margin: 0;
-  padding: 0;
-  /* font-family: "Roboto", "Arial", sans-serif; */
+  padding: 0;  
+  font-family: "Barlow", "Arial", sans-serif;
   /* font-size: 16px; */
   /* font-weight: 400; */
   /* line-height: var(--main-line-height); */
@@ -50,7 +90,8 @@ body{
 /* CONTAINER */
 
 .container{
-  /* max-width: your-size-here; */
+  width: 100%;
+  max-width:1320px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 20px;
@@ -61,5 +102,229 @@ body{
 .site-main{
   flex-grow: 1;
 }
+.headr-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 44px 0 45px 0;
+}
+.logo img {
+  width: 236px;
+  height: 26px;
+}
+.menu-btn {
+  width: 16px;
+  height: 15px;
+  border: none;
+  background-color:transparent;
+  background-image: url("../images/menu-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  display: none;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav__list-item:not(:last-child) {
+margin-right: 32px;
+}
+.nav__list-link {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.923077px;
+  text-transform: uppercase;
+  color: #83888F;
+}
+.nav__list-link:hover {
+  color: var(--main-text-color-black);
+}
+
+.hero__inner {
+  padding: 117px 85px;
+  background-image: url("../images/Bitmap.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+.hero-contant {
+  max-width: 493px;
+}
+.hero-contant-title {
+  margin: 0;
+  font-family: 'Fraunces';
+font-weight: 900;
+font-size: 72px;
+line-height: 72px;
+color: var(--main-text-color-white);
+}
+.hero-contant-text {
+  max-width: 425px;
+  margin: 32px 0 56px 0;
+  font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+color: var(--main-text-color-white);
+opacity: 0.8;
+}
+.btn-grin {
+  padding: 15px 31px;
+  font-family: 'Fraunces';
+  font-weight: 900;
+font-size: 18px;
+line-height: 25px;
+border-radius: 6px;
+color: var(--main-text-color-white);
+background-color: var(--main-btn-color-grin);
+}
+.btn-grin:hover {
+  color: #FEFCF7;
+  background-color:#66D2CF;
+} 
 
 
+@media only screen and (max-width:768px) {  
+
+  .hero__inner {
+    padding: 100px 58px;
+    background-image: url("../images/Bitmap-tablet.jpg");
+    border-radius: 10px;
+  
+  }
+  .hero-contant {
+  max-width: 398px;
+  
+  
+  }
+  .hero-contant-title {
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .hero-contant-text {
+  
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+  
+  }
+  }
+@media only screen and (max-width:768px) {  
+
+.hero__inner {
+  padding: 100px 58px;
+  background-image: url("../images/Bitmap-tablet.jpg");
+  border-radius: 10px;
+
+}
+.hero-contant {
+max-width: 398px;
+
+
+}
+.hero-contant-title {
+  font-family: 'Fraunces';
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 48px;
+}
+.hero-contant-text {
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+
+}
+}
+@media only screen and (max-width:620px) {
+  .container {
+    padding: 0 24px;
+  }
+  .logo img {
+    width: 163px;
+    height: 18px;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .nav {
+    display: none;
+    width: 100%;
+  }
+  .headr-inner {
+    position: relative;
+  }
+  .nav--active + .menu-btn {
+    background-image: url("../images/close-icon.svg");
+
+  }
+  .nav--active {
+    animation-name:menu;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    max-width: 100%;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    z-index: 10;
+    background-image: linear-gradient(0deg, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%);
+   padding: 40px 0;
+  }
+  .nav--active .nav__list {
+   flex-direction: column;
+   align-items: center;
+  }
+  .nav--active .nav__list-item:not(:last-child) {
+    margin: 0;
+  margin-bottom: 32px;
+  }
+  .nav--active .nav__list-link {
+    font-family: 'Fraunces';
+font-weight: 900;
+font-size: 24px;
+line-height: 32px;
+color: var(--main-text-color-black);
+  }
+  @keyframes menu {
+    0% {
+      transform: translateY(-150%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+.hero__inner {
+  padding: 100px 24px;
+  background-image: url("../images/Bitmap-mobile.jpg");
+  border-radius: 10px;
+}
+.hero-contant {
+max-width: 279px;
+text-align:center;
+margin: 0 auto;
+}
+.hero-contant-title {
+  font-family: 'Fraunces';
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 40px;
+}
+.hero-contant-text {
+  max-width: 279px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+
+}
+}
