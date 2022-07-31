@@ -7,9 +7,7 @@ elModalOpenButton.addEventListener("click", function () {
 });
 
 elModalOpenlink.addEventListener("click", function (evt) {
-  setTimeout(() => {
-    evt.preventDefault();
-   },100)
+
   elModal.classList.remove("nav--active");
 })
 
